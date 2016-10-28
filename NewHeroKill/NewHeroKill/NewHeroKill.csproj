@@ -44,6 +44,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Card\AbstractCard.cs" />
+    <Compile Include="Card\ICard.cs" />
+    <Compile Include="Card\IComboCard.cs" />
+    <Compile Include="Card\IDelayKit.cs" />
+    <Compile Include="Card\IEquipmentCard.cs" />
+    <Compile Include="Card\IVirtualCard.cs" />
+    <Compile Include="Card\IWeaponCard.cs" />
+    <Compile Include="Data\Enums\ECardColorTypes.cs" />
+    <Compile Include="Data\Enums\ECountry.cs" />
+    <Compile Include="Data\Enums\EEquipmentType.cs" />
+    <Compile Include="Data\Enums\EErrorMessageType.cs" />
+    <Compile Include="Data\Enums\EIdentity.cs" />
+    <Compile Include="Data\Type\EquipmentStructure.cs" />
+    <Compile Include="Data\Type\Target.cs" />
+    <Compile Include="Player\AbstractPlayer.cs" />
+    <Compile Include="Player\Card_Sha.cs" />
+    <Compile Include="Player\IPlayerProcess.cs" />
+    <Compile Include="Player\Impl\Class1.cs" />
+    <Compile Include="Player\Impl\PlayerInfo.cs" />
+    <Compile Include="Player\Impl\PlayerState.cs" />
+    <Compile Include="Player\IPlayer.cs" />
+    <Compile Include="Player\IPlayerAction.cs" />
+    <Compile Include="Player\IPlayerFunction.cs" />
+    <Compile Include="Player\IPlayerRequest.cs" />
+    <Compile Include="Player\IPlayerTrigger.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +101,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Card\Base\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
