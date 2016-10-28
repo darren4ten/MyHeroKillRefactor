@@ -13,17 +13,39 @@ namespace NewHeroKill.Card
     /// </summary>
     public interface IEquipmentCard
     {
-        //装载
+        /// <summary>
+        /// 装载
+        /// </summary>
+        /// <param name="p"></param>
         void Load(AbstractPlayer p);
-        //卸载
+
+        /// <summary>
+        /// 卸载
+        /// </summary>
+        /// <param name="p"></param>
         void Unload(AbstractPlayer p);
-        //获取攻击距离
+
+        /// <summary>
+        /// 获取攻击距离
+        /// </summary>
+        /// <returns></returns>
         int GetAttDistance();
-        //获取防御距离
+
+       /// <summary>
+        /// 获取防御距离
+       /// </summary>
+       /// <returns></returns>
         int GetDefDistance();
-        //获取类型
+
+        /// <summary>
+        /// 获取装备类型
+        /// </summary>
+        /// <returns></returns>
         EEquipmentType GetEquipmentType();
-        //回合初始化
+
+        /// <summary>
+        /// 回合初始化
+        /// </summary>
         void BeginInit();
     }
 }

@@ -8,11 +8,20 @@ namespace NewHeroKill.Player
 {
     public interface IPlayer
     {	
-        //载入技能
+        /// <summary>
+        /// 载入技能
+        /// </summary>
+        /// <param name="name"></param>
         void LoadSkills(String name);
-        //执行回合
+
+        /// <summary>
+        /// 执行回合
+        /// </summary>
         void Process();
-        //刷新关联的面板
+
+        /// <summary>
+        /// 刷新关联的面板
+        /// </summary>
         void RefreshView();
     }
 }

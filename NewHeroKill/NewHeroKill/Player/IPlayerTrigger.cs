@@ -8,46 +8,73 @@ namespace NewHeroKill.Player
 {
     public interface IPlayerTrigger
     {
-        //使用杀触发
+        /// <summary>
+        /// 使用杀触发
+        /// </summary>
         void AfterSha();
 
-        //使用闪触发
+        /// <summary>
+        /// 使用闪触发
+        /// </summary>
         void AfterShan();
 
-        //使用桃触发
+        /// <summary>
+        /// 使用桃触发
+        /// </summary>
         void AfterYao();
 
-        //加血触发
+        /// <summary>
+        /// 加血触发
+        /// </summary>
         void AfterAddHP();
 
-        //在掉血之前触发
+        /// <summary>
+        /// 在掉血之前触发
+        /// </summary>
         void BeforeLoseHP();
 
-        //扣血触发
+        /// <summary>
+        /// 扣血触发
+        /// </summary>
+        /// <param name="murderer"></param>
         void AfterLoseHP(AbstractPlayer murderer);
 
-        //获得手牌触发
+        /// <summary>
+        /// 获得手牌触发
+        /// </summary>
         void AfterGetHandCard();
 
-        //丢失手牌触发
+        /// <summary>
+        /// 丢失手牌触发
+        /// </summary>
         void AfterLoseHandCard();
 
-        //获得装备触发
+        /// <summary>
+        /// 获得装备触发
+        /// </summary>
         void AfterLoadEquipmentCard();
 
-        //丢失装备触发
+        /// <summary>
+        /// 丢失装备触发
+        /// </summary>
         void AfterUnloadEquipmentCard();
 
-        //没有手牌触发
+        /// <summary>
+        /// 没有手牌触发
+        /// </summary>
         void AfterNoCards();
 
         // //翻出判定牌后触发
         //  void afterDetermine(AbstractCard c, boolean result);
 
-        //使用锦囊触发
+        /// <summary>
+        /// 使用锦囊触发
+        /// </summary>
         void AfterMagic();
 
-        //死亡触发
+        /// <summary>
+        /// 死亡触发
+        /// </summary>
         void AfterDead();
     }
 }

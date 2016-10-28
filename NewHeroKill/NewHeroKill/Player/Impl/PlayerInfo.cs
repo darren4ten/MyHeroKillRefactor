@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 namespace NewHeroKill.Player.Impl
 {
     public class PlayerInfo
-    {//人物名称
+    {
+        //人物名称
         protected String name;
         //血量上限
         protected int maxHP;

@@ -4,25 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NewHeroKill.Card
+namespace NewHeroKill.Skill
 {
-    public interface IDelayKit
+    public interface ISkill
     {
         /// <summary>
-        /// 发动技能
+        /// 技能初始化
         /// </summary>
-        void DoKit();
+        void Init();
 
         /// <summary>
-        /// 获取锦囊类型
+        /// 技能使用允许
         /// </summary>
         /// <returns></returns>
-        int GetKitCardType();
+        bool IsEnableUse();
 
         /// <summary>
-        /// 获取面板显示字符
+        /// 获取技能名称
         /// </summary>
         /// <returns></returns>
-        String GetShowNameInPanel();
+        String GetName();
     }
+
 }

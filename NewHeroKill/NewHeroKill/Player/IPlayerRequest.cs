@@ -8,28 +8,51 @@ namespace NewHeroKill.Player
 {
     public interface IPlayerRequest
     {
-        //询问是否打出一张手牌
+        /// <summary>
+        /// 询问是否打出一张手牌
+        /// </summary>
+        /// <returns></returns>
         bool RequestOneCard();
 
-        //询问是否出杀
+        /// <summary>
+        /// 询问是否出杀
+        /// </summary>
+        /// <returns></returns>
         bool RequestSha();
 
-        //询问是否出闪
+        /// <summary>
+        /// 询问是否出闪
+        /// </summary>
+        /// <returns></returns>
         bool RequestShan();
 
-        //询问是否出桃
+        /// <summary>
+        /// 询问是否出桃
+        /// </summary>
+        /// <returns></returns>
         bool RequestYao();
 
-        //询问是否出无懈
+        /// <summary>
+        /// 询问是否出无懈
+        /// </summary>
+        /// <returns></returns>
         bool RequestWuXie();
 
-        //获取当前响应牌型
+        /// <summary>
+        /// 获取当前响应牌型
+        /// </summary>
+        /// <returns></returns>
         int GetCurType();
 
-        //设置当前响应牌型
+        /// <summary>
+        /// 设置当前响应牌型
+        /// </summary>
+        /// <param name="curType"></param>
         void SetCurType(int curType);
 
-        //清空状态
+        /// <summary>
+        /// 清空状态
+        /// </summary>
         void Clear();
     }
 }

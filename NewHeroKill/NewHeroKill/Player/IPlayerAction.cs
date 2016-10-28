@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NewHeroKill.Card;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,64 +10,124 @@ namespace NewHeroKill.Player
     public interface IPlayerAction
     {
 
-        //使用杀
+        /// <summary>
+        /// 使用杀
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns></returns>
         bool Sha(AbstractPlayer p);
 
-        //带技能杀
+        /// <summary>
+        /// 带技能杀
+        /// </summary>
         void ShaWithSkill();
 
-        //带装备杀
+        /// <summary>
+        /// 带装备杀
+        /// </summary>
         void ShaWithEquipment();
 
-        //使用闪
+        /// <summary>
+        /// 使用闪
+        /// </summary>
         void Shan();
 
-        //使用桃
+        /// <summary>
+        /// 使用桃
+        /// </summary>
         void Tao();
 
-        //是否回避杀
+        /// <summary>
+        /// 是否回避杀
+        /// </summary>
+        /// <param name="murder"></param>
+        /// <param name="card"></param>
+        /// <returns></returns>
         bool AvoidSha(AbstractPlayer murder, Card_Sha card);
 
-        //决斗
+        /// <summary>
+        /// 决斗
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns></returns>
         bool JueDou(AbstractPlayer p);
 
-        //救人
+        /// <summary>
+        /// 救人
+        /// </summary>
+        /// <param name="p"></param>
         void TaoSave(AbstractPlayer p);
 
-        //加血
+        /// <summary>
+        /// 加血
+        /// </summary>
+        /// <param name="num"></param>
         void AddHP(int num);
 
-        //扣血
+        /// <summary>
+        /// 扣血
+        /// </summary>
+        /// <param name="num"></param>
+        /// <param name="murderer"></param>
         void LoseHP(int num, AbstractPlayer murderer);
 
-        //将制定牌添加到手牌中
+        /// <summary>
+        /// 将制定牌添加到手牌中
+        /// </summary>
+        /// <param name="c"></param>
         void AddCardToHandCard(AbstractCard c);
 
-        //从牌堆摸1张牌
+        /// <summary>
+        /// 从牌堆摸1张牌
+        /// </summary>
         void AddOneCardFromList();
 
-        //丢失手牌
+        /// <summary>
+        /// 丢失手牌
+        /// </summary>
+        /// <param name="num"></param>
         void LoseHandCard(int num);
 
-        //删除手牌
+        /// <summary>
+        /// 删除手牌
+        /// </summary>
+        /// <param name="index"></param>
         void RemoveCard(int index);
 
-        //删除指定手牌
+        /// <summary>
+        /// 删除指定手牌
+        /// </summary>
+        /// <param name="c"></param>
         void RemoveCard(AbstractCard c);
 
-        //装载装备
+        /// <summary>
+        /// 装载装备
+        /// </summary>
+        /// <param name="c"></param>
         void LoadEquipmentCard(AbstractCard c);
 
-        //丢失装备
+        /// <summary>
+        /// 丢失装备
+        /// </summary>
+        /// <param name="c"></param>
         void UnloadEquipmentCard(AbstractCard c);
 
-        //发动锦囊效果
+        /// <summary>
+        /// 发动锦囊效果
+        /// </summary>
         void Magic();
 
-        //处理判定牌
+        /// <summary>
+        /// 处理判定牌
+        /// </summary>
+        /// <param name="c"></param>
+        /// <returns></returns>
         AbstractCard DealWithCheckCard(AbstractCard c);
 
-        //死亡
+        /// <summary>
+        /// 死亡
+        /// </summary>
+        /// <param name="murderer"></param>
         void Dead(AbstractPlayer murderer);
     }
 }

@@ -9,13 +9,23 @@ namespace NewHeroKill.Card
 {
     public interface IVirtualCard
     {
-        //获取真实牌
+        /// <summary>
+        /// 获取真实牌
+        /// </summary>
+        /// <returns></returns>
         AbstractCard GetRealCard();
 
-        //获取该虚拟牌的替代值
+        /// <summary>
+        /// 获取该虚拟牌的替代值
+        /// </summary>
+        /// <returns></returns>
         int GetCardType();
 
-        //主动使用
+        /// <summary>
+        /// 主动使用
+        /// </summary>
+        /// <param name="p"></param>
+        /// <param name="toP"></param>
         void Use(AbstractPlayer p, AbstractPlayer toP);
     }
 }

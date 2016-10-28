@@ -10,44 +10,96 @@ namespace NewHeroKill.Player
 {
     public interface IPlayerFunction
     {
-        // 获取上家
+        /// <summary>
+        ///  获取上家
+        /// </summary>
+        /// <returns></returns>
         AbstractPlayer GetLastPlayer();
 
-        // 是否满血
+        /// <summary>
+        /// 是否满血
+        /// </summary>
+        /// <returns></returns>
         bool IsFullHP();
 
-        // 是否空血
+        /// <summary>
+        /// 是否空血
+        /// </summary>
         void IsNullHP();
 
-        // 计算两家之间的距离
+        /// <summary>
+        /// 计算两家之间的距离
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns></returns>
         int GetDistance(AbstractPlayer p);
 
-        // 获取场上全部玩家
+        /// <summary>
+        /// 获取场上全部玩家
+        /// </summary>
+        /// <returns></returns>
         List<AbstractPlayer> GetAllPlayers();
 
-        // 获取全部玩家的手牌
+        /// <summary>
+        /// 获取全部玩家的手牌
+        /// </summary>
+        /// <returns></returns>
         List<String> GetAllPlayersHandCard();
 
-        // 翻开一张判定牌进行花色判定
+        /// <summary>
+        /// 翻开一张判定牌进行花色判定
+        /// </summary>
+        /// <param name="card"></param>
+        /// <param name="colors"></param>
+        /// <returns></returns>
         bool CheckRollCard(AbstractCard card, params ECardColorTypes[] colors);
 
-        // 翻开一张判定牌进行数值判定
+        /// <summary>
+        /// 翻开一张判定牌进行数值判定
+        /// </summary>
+        /// <param name="card"></param>
+        /// <param name="max"></param>
+        /// <param name="min"></param>
+        /// <returns></returns>
         bool CheckRollCard(AbstractCard card, int max, int min);
 
-        //攻击范围
+        /// <summary>
+        /// 攻击范围
+        /// </summary>
+        /// <returns></returns>
         int GetAttackDistance();
 
-        //防守距离
+        /// <summary>
+        /// 防守距离
+        /// </summary>
+        /// <returns></returns>
         int GetDefenceDistance();
 
-        //锦囊使用范围
+        /// <summary>
+        /// 锦囊使用范围
+        /// </summary>
+        /// <returns></returns>
         int GetKitUseDistance();
 
+        /// <summary>
+        /// 是否在攻击范围
+        /// </summary>
+        /// <param name="target"></param>
+        /// <returns></returns>
         bool IsInRange(AbstractPlayer target);
 
-        //是否同一国家
+        /// <summary>
+        /// 是否同一国家
+        /// </summary>
+        /// <param name="target"></param>
+        /// <returns></returns>
         bool IsSameCountry(AbstractPlayer target);
-        //是否同性别
+
+        /// <summary>
+        /// 是否同性别
+        /// </summary>
+        /// <param name="target"></param>
+        /// <returns></returns>
         bool IsSameSex(AbstractPlayer target);
     }
 }

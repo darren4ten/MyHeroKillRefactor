@@ -8,16 +8,16 @@ namespace NewHeroKill.Player
 {
     public interface IPlayerProcess
     {
-        void start();
-        void stage_begin();
-        void stage_check();
-        void stage_addCards();
-        void stage_useCards();
-        void stage_throwCrads();
-        void stage_end();
-        void setSkilling(bool b);
-        bool isSkilling();
-        void setCanUseCard(bool canAddCard);
+        void Start();
+        void Stage_begin();
+        void Stage_check();
+        void Stage_addCards();
+        void Stage_useCards();
+        void Stage_throwCrads();
+        void Stage_end();
+        void SetSkilling(bool b);
+        bool IsSkilling();
+        void SetCanUseCard(bool canAddCard);
     }
 
 }

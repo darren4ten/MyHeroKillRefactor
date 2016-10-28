@@ -40,14 +40,14 @@ namespace NewHeroKill.Data.Type
         /**
          * 是否有武器
          */
-        public boolean hasWeapons()
+        public bool hasWeapons()
         {
             return weapons != null;
         }
         /**
          * 是否有码
          */
-        public boolean hasHorse()
+        public bool hasHorse()
         {
             return attHorse != null || defHorse != null;
         }
@@ -66,7 +66,7 @@ namespace NewHeroKill.Data.Type
         /**
          * 是否没有装备
          */
-        public boolean isEmpty()
+        public bool isEmpty()
         {
             return weapons == null && armor == null && attHorse == null && defHorse == null;
         }
