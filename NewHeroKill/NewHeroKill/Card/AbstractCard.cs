@@ -111,7 +111,7 @@ namespace NewHeroKill.Card
         /// </summary>
         /// <param name="p"></param>
         /// <param name="players"></param>
-        public void use(AbstractPlayer p, List<AbstractPlayer> players)
+        public void Use(AbstractPlayer p, List<AbstractPlayer> players)
         {
             //// 清空战场
             //ModuleManagement.getInstance().getBattle().clear();
@@ -120,7 +120,7 @@ namespace NewHeroKill.Card
             // 放入当前出牌区
             p.GetState().GetUsedCard().Add(this);
             // 手牌中删除
-            p.GetAction().removeCard(this);
+            p.GetAction().RemoveCard(this);
             //// 战场中添加
             //ModuleManagement.getInstance().getBattle().addOneCard(this);
             // 丢入弃牌堆
@@ -138,7 +138,7 @@ namespace NewHeroKill.Card
         /// <param name="p"></param>
         /// <param name="players"></param>
         /// <returns></returns>
-        public bool requestUse(AbstractPlayer p,
+        public bool RequestUse(AbstractPlayer p,
                 List<AbstractPlayer> players)
         {
             // 当前出牌区域清空
@@ -146,7 +146,7 @@ namespace NewHeroKill.Card
             // 放入当前出牌区
             p.GetState().GetUsedCard().Add(this);
             // 手牌中删除
-            p.GetAction().removeCard(this);
+            p.GetAction().RemoveCard(this);
             //// 战场中添加
             //ModuleManagement.getInstance().getBattle().addOneCard(this);
             // 丢入弃牌堆

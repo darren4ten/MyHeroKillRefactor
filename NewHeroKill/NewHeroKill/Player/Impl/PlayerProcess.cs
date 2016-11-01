@@ -48,7 +48,7 @@ namespace NewHeroKill.Player.Impl
             player.SetSkip(false);
             player.GetState().SetExtDamage(0);
             player.GetState().SetUsedSha(false);
-            player.GetState().GetEquipment().initAll();
+            player.GetState().GetEquipment().InitAll();
             // 技能初始化
             List<ISkill> skills = player.GetState().GetSkill();
             if (skills.Count() > 0)

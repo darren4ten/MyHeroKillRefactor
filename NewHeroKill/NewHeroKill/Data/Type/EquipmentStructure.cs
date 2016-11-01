@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NewHeroKill.Card.Equipment;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,23 +32,23 @@ namespace NewHeroKill.Data.Type
         /**
          * 回合初始化所有装备
          */
-        public void initAll()
+        public void InitAll()
         {
-            if (weapons != null) weapons.beginInit();
-            if (armor != null) armor.beginInit();
+            if (weapons != null) weapons.BeginInit();
+            if (armor != null) armor.BeginInit();
         }
 
         /**
          * 是否有武器
          */
-        public bool hasWeapons()
+        public bool HasWeapons()
         {
             return weapons != null;
         }
         /**
          * 是否有码
          */
-        public bool hasHorse()
+        public bool HasHorse()
         {
             return attHorse != null || defHorse != null;
         }
@@ -55,7 +56,7 @@ namespace NewHeroKill.Data.Type
         /**
          * 删除所有装备
          */
-        public void removeALL()
+        public void RemoveALL()
         {
             weapons = null;
             armor = null;
@@ -66,24 +67,24 @@ namespace NewHeroKill.Data.Type
         /**
          * 是否没有装备
          */
-        public bool isEmpty()
+        public bool IsEmpty()
         {
             return weapons == null && armor == null && attHorse == null && defHorse == null;
         }
 
 
-        public AbstractEquipmentCard getWeapons()
+        public AbstractEquipmentCard GetWeapons()
         {
             return weapons;
         }
 
 
-        public AbstractEquipmentCard getArmor()
+        public AbstractEquipmentCard GetArmor()
         {
             return armor;
         }
 
-        public void setArmor(AbstractEquipmentCard armor)
+        public void SetArmor(AbstractEquipmentCard armor)
         {
             this.armor = armor;
         }
@@ -93,7 +94,7 @@ namespace NewHeroKill.Data.Type
             return attHorse;
         }
 
-        public void setAttHorse(AbstractEquipmentCard attHorse)
+        public void SetAttHorse(AbstractEquipmentCard attHorse)
         {
             this.attHorse = attHorse;
         }
@@ -103,12 +104,12 @@ namespace NewHeroKill.Data.Type
             return defHorse;
         }
 
-        public void setDefHorse(AbstractEquipmentCard defHorse)
+        public void SetDefHorse(AbstractEquipmentCard defHorse)
         {
             this.defHorse = defHorse;
         }
 
-        public void setWeapons(AbstractEquipmentCard weapons)
+        public void SetWeapons(AbstractEquipmentCard weapons)
         {
             this.weapons = weapons;
         }

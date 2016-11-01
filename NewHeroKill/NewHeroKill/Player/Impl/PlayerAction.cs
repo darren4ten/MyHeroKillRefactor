@@ -1,4 +1,5 @@
 ﻿using NewHeroKill.Card;
+using NewHeroKill.Card.Base;
 using NewHeroKill.Data.Enums;
 using System;
 using System.Collections.Generic;
@@ -279,7 +280,7 @@ namespace NewHeroKill.Player.Impl
                         murderer.GetState().GetId() == EIdentity.ZHUGONG)
                 {
                     murderer.GetState().GetCardList().Clear();
-                    murderer.GetState().GetEquipment().removeALL();
+                    murderer.GetState().GetEquipment().RemoveALL();
                     //AISpeakService.sayFuckBoss(player);
                 }
                 player.RefreshView();
@@ -376,7 +377,7 @@ namespace NewHeroKill.Player.Impl
         /// <param name="murder"></param>
         /// <param name="card"></param>
         /// <returns></returns>
-        public bool AvoidSha(AbstractPlayer murder, Card_Sha card)
+        public bool AvoidSha(AbstractPlayer murder, CardSha card)
         {
             return false;
         }

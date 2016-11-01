@@ -1,4 +1,5 @@
 ﻿using NewHeroKill.Card;
+using NewHeroKill.Card.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,7 +44,7 @@ namespace NewHeroKill.Player
         /// <param name="murder"></param>
         /// <param name="card"></param>
         /// <returns></returns>
-        bool AvoidSha(AbstractPlayer murder, Card_Sha card);
+        bool AvoidSha(AbstractPlayer murder, CardSha card);
 
         /// <summary>
         /// 决斗

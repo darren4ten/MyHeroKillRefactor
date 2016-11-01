@@ -48,7 +48,7 @@ namespace NewHeroKill.Player.Impl
                     }
                     else
                     {
-                        listSha.ElementAt(0).requestUse(player, null);
+                        listSha.ElementAt(0).RequestUse(player, null);
                         //player.getState().setRequest(false);
                         Clear();
                         return true;
@@ -144,7 +144,7 @@ namespace NewHeroKill.Player.Impl
                     }
                     else
                     {
-                        listTao.ElementAt(0).requestUse(player, null);
+                        listTao.ElementAt(0).RequestUse(player, null);
                         Clear();
                         return true;
                     }
@@ -182,7 +182,7 @@ namespace NewHeroKill.Player.Impl
                     Sleep(1000);
                     //player.getState().setRequest(false);
                     Clear();
-                    return listWuXie.ElementAt(0).requestUse(player, null);
+                    return listWuXie.ElementAt(0).RequestUse(player, null);
                 }
                 else
                 {

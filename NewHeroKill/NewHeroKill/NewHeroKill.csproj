@@ -45,13 +45,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Card\AbstractCard.cs" />
+    <Compile Include="Card\Base\CardSha.cs" />
+    <Compile Include="Card\Base\CardShan.cs" />
+    <Compile Include="Card\Base\CardTao.cs" />
+    <Compile Include="Card\Changed\VirtualLeBuSiShu.cs" />
+    <Compile Include="Card\Changed\VirtualGuoHeChaiQiao.cs" />
+    <Compile Include="Card\Changed\VirtualSha.cs" />
+    <Compile Include="Card\Changed\ComboSha.cs" />
+    <Compile Include="Card\Equipment\AbstractEquipmentCard.cs" />
+    <Compile Include="Card\Equipment\AbstractWeaponCard.cs" />
+    <Compile Include="Card\Equipment\IActiveSkillWeaponCard.cs" />
+    <Compile Include="Card\Equipment\IArmor.cs" />
+    <Compile Include="Card\IEffectCard.cs" />
     <Compile Include="Card\ICard.cs" />
     <Compile Include="Card\IComboCard.cs" />
     <Compile Include="Card\IDelayKit.cs" />
     <Compile Include="Card\IEquipmentCard.cs" />
     <Compile Include="Card\IVirtualCard.cs" />
     <Compile Include="Card\IWeaponCard.cs" />
-    <Compile Include="Data\Const\Class1.cs" />
+    <Compile Include="Card\Kit\AbstractKitCard.cs" />
+    <Compile Include="Card\Kit\CardGuoHeChaiQiao.cs" />
+    <Compile Include="Card\Kit\CardLeBuSiShu.cs" />
+    <Compile Include="Data\Const\Const_UI.cs" />
     <Compile Include="Data\Const\Const_Game.cs" />
     <Compile Include="Data\Enums\ECardColorTypes.cs" />
     <Compile Include="Data\Enums\ECountry.cs" />
@@ -63,7 +78,6 @@
     <Compile Include="Data\Type\EquipmentStructure.cs" />
     <Compile Include="Data\Type\Target.cs" />
     <Compile Include="Player\AbstractPlayer.cs" />
-    <Compile Include="Player\Card_Sha.cs" />
     <Compile Include="Player\GameObject.cs" />
     <Compile Include="Player\Impl\Player.cs" />
     <Compile Include="Player\Impl\PlayerTrigger.cs" />
@@ -102,6 +116,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -117,13 +132,112 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Card\Base\" />
+    <Folder Include="GUI\Main\" />
+    <Folder Include="GUI\Start\" />
+    <Folder Include="Service\" />
     <Folder Include="Skill\Actions\" />
     <Folder Include="Skill\Actives\" />
     <Folder Include="Skill\Functions\" />
     <Folder Include="Skill\Other\" />
     <Folder Include="Skill\Process\" />
     <Folder Include="Skill\Trigger\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Img\bd_cur.png" />
+    <Content Include="Img\bd_dead.png" />
+    <Content Include="Img\bd_doing.png" />
+    <Content Include="Img\bd_eq.jpg" />
+    <Content Include="Img\bd_select.png" />
+    <Content Include="Img\bd_skill.png" />
+    <Content Include="Img\bend.png" />
+    <Content Include="Img\bg.jpg" />
+    <Content Include="Img\bg_card.jpg" />
+    <Content Include="Img\bg_control.jpg" />
+    <Content Include="Img\bg_eq.jpg" />
+    <Content Include="Img\bg_selectcard.jpg" />
+    <Content Include="Img\bok.png" />
+    <Content Include="Img\bok2.png" />
+    <Content Include="Img\cardNum.png" />
+    <Content Include="Img\color_fangkuai.png" />
+    <Content Include="Img\color_heitao.png" />
+    <Content Include="Img\color_hongxin.png" />
+    <Content Include="Img\color_meihua.png" />
+    <Content Include="Img\ef_guohechaiqiao.png" />
+    <Content Include="Img\ef_jiedaosharen.png" />
+    <Content Include="Img\ef_juedou.png" />
+    <Content Include="Img\ef_lebusishu.png" />
+    <Content Include="Img\ef_nanmanruqin.png" />
+    <Content Include="Img\ef_sha.png" />
+    <Content Include="Img\ef_shan.png" />
+    <Content Include="Img\ef_shandian.png" />
+    <Content Include="Img\ef_shunshouqianyang.png" />
+    <Content Include="Img\ef_tao.png" />
+    <Content Include="Img\ef_taoyuanjieyi.png" />
+    <Content Include="Img\ef_wanjianqifa.png" />
+    <Content Include="Img\ef_wugufengdeng.png" />
+    <Content Include="Img\ef_wuxiekeji.png" />
+    <Content Include="Img\ef_wuzhongshengyou.png" />
+    <Content Include="Img\eq_bagua.png" />
+    <Content Include="Img\eq_cixiong.png" />
+    <Content Include="Img\eq_dawan.png" />
+    <Content Include="Img\eq_dilu.png" />
+    <Content Include="Img\eq_fangtianhuaji.png" />
+    <Content Include="Img\eq_guanshi.png" />
+    <Content Include="Img\eq_qilingong.png" />
+    <Content Include="Img\eq_qinggang.png" />
+    <Content Include="Img\eq_qinglongyanyuedao.png" />
+    <Content Include="Img\eq_zhangbashemao.png" />
+    <Content Include="Img\eq_zhugeliannu.png" />
+    <Content Include="Img\headborder.png" />
+    <Content Include="Img\hp.png" />
+    <Content Include="Img\hp2.png" />
+    <Content Include="Img\hurt.png" />
+    <Content Include="Img\id_fan.png" />
+    <Content Include="Img\id_nei.png" />
+    <Content Include="Img\id_null.png" />
+    <Content Include="Img\id_zhong.png" />
+    <Content Include="Img\id_zhu.png" />
+    <Content Include="Img\J_guohe.png" />
+    <Content Include="Img\J_jiedaosharen.png" />
+    <Content Include="Img\J_juedou.png" />
+    <Content Include="Img\J_lebusishu.png" />
+    <Content Include="Img\J_nanman.png" />
+    <Content Include="Img\J_shandian.png" />
+    <Content Include="Img\J_shunshou.png" />
+    <Content Include="Img\J_taoyuan.png" />
+    <Content Include="Img\J_wanjian.png" />
+    <Content Include="Img\J_wugu.png" />
+    <Content Include="Img\J_wuxiekeji.png" />
+    <Content Include="Img\J_wuzhong.png" />
+    <Content Include="Img\ksha.png" />
+    <Content Include="Img\kshan.png" />
+    <Content Include="Img\ktao.png" />
+    <Content Include="Img\loadimg.jpg" />
+    <Content Include="Img\P_caocao.jpg" />
+    <Content Include="Img\P_daqiao.jpg" />
+    <Content Include="Img\P_diaochan.jpg" />
+    <Content Include="Img\P_ganning.jpg" />
+    <Content Include="Img\P_guanyu.jpg" />
+    <Content Include="Img\P_guojia.jpg" />
+    <Content Include="Img\P_huanggai.jpg" />
+    <Content Include="Img\P_huangyueying.jpg" />
+    <Content Include="Img\P_huatuo.jpg" />
+    <Content Include="Img\P_liubei.jpg" />
+    <Content Include="Img\P_luxun.jpg" />
+    <Content Include="Img\P_lvbu.jpg" />
+    <Content Include="Img\P_lvmeng.jpg" />
+    <Content Include="Img\P_machao.jpg" />
+    <Content Include="Img\P_simayi.jpg" />
+    <Content Include="Img\P_sunquan.jpg" />
+    <Content Include="Img\P_sunshangxiang.jpg" />
+    <Content Include="Img\P_xiahoudun.jpg" />
+    <Content Include="Img\P_xuchu.jpg" />
+    <Content Include="Img\P_zhangfei.jpg" />
+    <Content Include="Img\P_zhangliao.jpg" />
+    <Content Include="Img\P_zhaoyun.jpg" />
+    <Content Include="Img\P_zhenji.jpg" />
+    <Content Include="Img\P_zhouyu.jpg" />
+    <Content Include="Img\P_zhugeliang.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
