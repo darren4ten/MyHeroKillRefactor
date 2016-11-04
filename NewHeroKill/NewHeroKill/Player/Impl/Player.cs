@@ -59,8 +59,8 @@ namespace NewHeroKill.Player.Impl
             //        if(type.equals("function")){
             //            setFunction((Player_FunctionIF) obj);
             //        }
-            //        if(obj instanceof LockingSkillIF){
-            //            LockingSkillIF ls = (LockingSkillIF) con.newInstance(this);
+            //        if(obj instanceof LockingISkill){
+            //            LockingISkill ls = (LockingISkill) con.newInstance(this);
             //            this.getState().getLockingSkill().add(ls);
             //            //this.info.lockingSkill = ls.getName();
             //        }
@@ -75,7 +75,7 @@ namespace NewHeroKill.Player.Impl
             //    if(strSkillName!=null){
             //        try {
             //            Constructor con = Class.forName(strSkillName).getConstructor(AbstractPlayer.class);
-            //            SkillIF skill = (SkillIF) con.newInstance(this);
+            //            ISkill skill = (ISkill) con.newInstance(this);
             //            getState().getSkill().add(skill);
             //        } catch (Exception e) {
             //            e.printStackTrace();

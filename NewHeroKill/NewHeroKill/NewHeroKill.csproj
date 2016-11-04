@@ -77,6 +77,28 @@
     <Compile Include="Data\Enums\ETargetType.cs" />
     <Compile Include="Data\Type\EquipmentStructure.cs" />
     <Compile Include="Data\Type\Target.cs" />
+    <Compile Include="GUI\Ctrls\PanelBattlefiled.cs" />
+    <Compile Include="GUI\Ctrls\PanelCamp.cs" />
+    <Compile Include="GUI\Ctrls\PanelCard.cs" />
+    <Compile Include="GUI\Ctrls\PanelEquipments.cs" />
+    <Compile Include="GUI\Ctrls\PanelGameOver.cs" />
+    <Compile Include="GUI\Ctrls\PanelHandCards.cs" />
+    <Compile Include="GUI\Ctrls\PanelHead.cs" />
+    <Compile Include="GUI\Ctrls\PanelHPAndCardNum.cs" />
+    <Compile Include="GUI\Ctrls\PanelMain.cs" />
+    <Compile Include="GUI\Ctrls\PanelMessage.cs" />
+    <Compile Include="GUI\Ctrls\PanelPlayerCurrent.cs" />
+    <Compile Include="GUI\Ctrls\PanelPlayerStandard.cs" />
+    <Compile Include="GUI\Ctrls\PanelPrompt.cs" />
+    <Compile Include="GUI\Ctrls\PanelSelectCards.cs" />
+    <Compile Include="GUI\Ctrls\PanelSkills.cs" />
+    <Compile Include="GUI\Ctrls\PanelWugufengdeng.cs" />
+    <Compile Include="GUI\UI\PanelCard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\UI\PanelBattlefield.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Player\AbstractPlayer.cs" />
     <Compile Include="Player\GameObject.cs" />
     <Compile Include="Player\Impl\Player.cs" />
@@ -101,12 +123,38 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\AI\AIConsiderService.cs" />
+    <Compile Include="Service\AI\AIProcessService.cs" />
+    <Compile Include="Service\AI\AISpeakService.cs" />
+    <Compile Include="Service\AI\AITargetCheckService.cs" />
+    <Compile Include="Service\MessageManagement.cs" />
+    <Compile Include="Service\ModuleManagement.cs" />
+    <Compile Include="Service\UsableCardCheckService.cs" />
+    <Compile Include="Service\ViewManagement.cs" />
     <Compile Include="Skill\ISkillChangeCard.cs" />
     <Compile Include="Skill\ISkillLocking.cs" />
     <Compile Include="Skill\ISkillMulty.cs" />
     <Compile Include="Skill\ISkill.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Ctrls\PanelBattlefiled.resx">
+      <DependentUpon>PanelBattlefiled.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Ctrls\PanelCard.resx">
+      <DependentUpon>PanelCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Ctrls\PanelEquipments.resx">
+      <DependentUpon>PanelEquipments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Ctrls\PanelHandCards.resx">
+      <DependentUpon>PanelHandCards.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Ctrls\PanelHead.resx">
+      <DependentUpon>PanelHead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Ctrls\PanelHPAndCardNum.resx">
+      <DependentUpon>PanelHPAndCardNum.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -134,7 +182,6 @@
   <ItemGroup>
     <Folder Include="GUI\Main\" />
     <Folder Include="GUI\Start\" />
-    <Folder Include="Service\" />
     <Folder Include="Skill\Actions\" />
     <Folder Include="Skill\Actives\" />
     <Folder Include="Skill\Functions\" />
