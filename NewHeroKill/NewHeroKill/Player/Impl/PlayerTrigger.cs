@@ -108,6 +108,22 @@ namespace NewHeroKill.Player.Impl
             c.Gc();
         }
 
+
+
+        public void AfterYao()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void BeforeLoseHP()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AfterNoCards()
+        {
+            throw new NotImplementedException();
+        }
     }
 
 }

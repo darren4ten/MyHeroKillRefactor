@@ -1,5 +1,6 @@
 ﻿using NewHeroKill.Card;
 using NewHeroKill.Card.Base;
+using NewHeroKill.Card.Equipment;
 using NewHeroKill.Data.Enums;
 using System;
 using System.Collections.Generic;
@@ -44,7 +45,7 @@ namespace NewHeroKill.Player.Impl
         public void LoadEquipmentCard(AbstractCard c)
         {
             AbstractEquipmentCard ceq = (AbstractEquipmentCard)c;
-            ceq.load(player);
+            ceq.Load(player);
             //触发
             player.GetTrigger().AfterLoadEquipmentCard();
         }
@@ -169,7 +170,7 @@ namespace NewHeroKill.Player.Impl
         {
             AbstractEquipmentCard aec = (AbstractEquipmentCard)c;
             //触发已经在武器卸载中调用
-            aec.unload(player);
+            aec.Unload(player);
         }
 
         /// <summary>
@@ -237,7 +238,7 @@ namespace NewHeroKill.Player.Impl
             }
             player.GetState().GetCardList().Clear();
             // 上下家重置
-            player.GetFunction().GetLastPlayer().setNextPlayer(
+            player.GetFunction().GetLastPlayer().SetNextPlayer(
                     player.GetNextPlayer());
             //检测该人物死亡是否终止游戏
             if (player.GetState().GetId() == EIdentity.ZHUGONG)

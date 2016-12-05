@@ -168,7 +168,7 @@ namespace NewHeroKill.Card
             // 当前出牌区域清空
             p.GetState().GetUsedCard().Clear();
             // 手牌中删除
-            p.GetAction().removeCard(this);
+            p.GetAction().RemoveCard(this);
             if (!p.GetState().IsAI())
                 p.UpdateCards();
             // 放入当前出牌区
@@ -187,10 +187,10 @@ namespace NewHeroKill.Card
         /// </summary>
         /// <param name="fromP"></param>
         /// <param name="receiverP"></param>
-        public override void passToPlayer(AbstractPlayer fromP, AbstractPlayer receiverP)
+        public new void PassToPlayer(AbstractPlayer fromP, AbstractPlayer receiverP)
         {
-            fromP.GetAction().removeCard(this);
-            receiverP.GetAction().addCardToHandCard(this);
+            fromP.GetAction().RemoveCard(this);
+            receiverP.GetAction().AddCardToHandCard(this);
         }
 
         /// <summary>
@@ -240,9 +240,9 @@ namespace NewHeroKill.Card
         /// <returns></returns>
         public bool IsInRange(AbstractPlayer user, AbstractPlayer target)
         {
-            int p2p = user.GetFunction().getDistance(target);
-            int att = user.GetFunction().getAttackDistance();
-            int def = target.GetFunction().getDefenceDistance();
+            int p2p = user.GetFunction().GetDistance(target);
+            int att = user.GetFunction().GetAttackDistance();
+            int def = target.GetFunction().GetDefenceDistance();
             return (att - def) >= p2p;
 
         }
@@ -356,5 +356,12 @@ namespace NewHeroKill.Card
         {
             this.effectImage = effectImage;
         }
+
+
+        public void ThrowIt(AbstractPlayer p)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

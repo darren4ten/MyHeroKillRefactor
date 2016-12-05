@@ -91,7 +91,7 @@ namespace NewHeroKill.Player.Impl
                 if (player.GetState().IsAI())
                 {
                     Sleep(1000);
-                    if (listShan.isEmpty())
+                    if (listShan.Count() < 1)
                     {
                         //player.getState().setRequest(false);
                         Clear();
@@ -99,7 +99,7 @@ namespace NewHeroKill.Player.Impl
                     }
                     else
                     {
-                        listShan.get(0).requestUse(player, null);
+                        listShan[0].RequestUse(player, null);
                         //player.getState().setRequest(false);
                         Clear();
                         return true;
@@ -175,7 +175,7 @@ namespace NewHeroKill.Player.Impl
             //player.getState().setRequest(true);
             player.SetRequest(true, Const_Game.WUXIEKEJI);
             List<AbstractCard> listWuXie = hasCard(Const_Game.WUXIEKEJI);
-            if (!listWuXie.Count() < 0)
+            if (listWuXie.Count() < 0)
             {
                 if (player.GetState().IsAI())
                 {
@@ -320,7 +320,7 @@ namespace NewHeroKill.Player.Impl
             }
             //player.getState().setRequest(false);
             Clear();
-            player.GetState().SetRessetRes(0);
+            player.GetState().SetRes(0);
             //synchronized (player.getProcess()) {
             //    while (!player.getState().isRequest) {
             //        player.getProcess().notify();
@@ -389,5 +389,20 @@ namespace NewHeroKill.Player.Impl
         }
 
 
+
+        public bool RequestOneCard()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool RequestShan()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool RequestYao()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

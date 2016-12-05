@@ -105,8 +105,8 @@ namespace NewHeroKill.Player.Impl
             //        PaintService.drawGetCards(player, 2);
             //    }
             //});*/
-            player.GetAction().addOneCardFromList();
-            player.GetAction().addOneCardFromList();
+            player.GetAction().AddOneCardFromList();
+            player.GetAction().AddOneCardFromList();
 
             player.RefreshView();
         }
@@ -129,7 +129,7 @@ namespace NewHeroKill.Player.Impl
             //ViewManagement.getInstance().printMsg( player.getInfo().getName() + "出牌");
 
 
-            while (!player.isSkip())
+            while (!player.IsSkip())
             {
                 //// 当按下确定时候
                 //if (player.getState().getRes() == Const_Game.OK) {
@@ -239,7 +239,7 @@ namespace NewHeroKill.Player.Impl
             //if(Frame_Main.isGameOver){
             //    return;
             //}
-            Console.WriteLine(player.GetInfo().getName() + "pass");
+            Console.WriteLine(player.GetInfo().GetName() + "pass");
             Thread.Sleep(800);
             //ViewManagement.getInstance().refreshAll();
             player.GetNextPlayer().Process();

@@ -8,7 +8,7 @@ using System.Text;
 
 namespace NewHeroKill.Player
 {
-    public class AbstractPlayer : IPlayer
+    public abstract class AbstractPlayer : IPlayer
     {
         // 玩家信息
         protected PlayerInfo info;
@@ -92,7 +92,7 @@ namespace NewHeroKill.Player
         /// </summary>
         public void RefreshView()
         {
-            getPanel().refresh();
+            //getPanel().refresh();
         }
 
         /// <summary>
@@ -129,11 +129,11 @@ namespace NewHeroKill.Player
             }
         }
 
-      /// <summary>
+        /// <summary>
         /// 是否拥有某种牌
-      /// </summary>
-      /// <param name="type"></param>
-      /// <returns></returns>
+        /// </summary>
+        /// <param name="type"></param>
+        /// <returns></returns>
         public bool HasCard(int type)
         {
             for (int i = 0; i < GetState().GetCardList().Count(); i++)
@@ -143,10 +143,10 @@ namespace NewHeroKill.Player
             return false;
         }
 
-      /// <summary>
+        /// <summary>
         /// 获取同势力人物集合
-      /// </summary>
-      /// <returns></returns>
+        /// </summary>
+        /// <returns></returns>
         public List<AbstractPlayer> GetSameCountryPlayers()
         {
             List<AbstractPlayer> result = new List<AbstractPlayer>();
@@ -162,12 +162,12 @@ namespace NewHeroKill.Player
             return result;
         }
 
-      /// <summary>
+        /// <summary>
         /// 设置是否处于请求响应状态
         /// 牌型为type
         /// </summary>
-      /// <param name="isRequest"></param>
-      /// <param name="type"></param>
+        /// <param name="isRequest"></param>
+        /// <param name="type"></param>
         public void SetRequest(bool isRequest, int type)
         {
             GetState().SetRequest(isRequest);

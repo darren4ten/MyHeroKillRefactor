@@ -40,7 +40,7 @@ namespace NewHeroKill.Player.Impl
         /// <returns></returns>
         public bool IsFullHP()
         {
-            return (player.GetState().getCurHP() == player.GetInfo().getMaxHP());
+            return (player.GetState().GetCurHP() == player.GetInfo().GetMaxHP());
         }
 
         /// <summary>
@@ -148,16 +148,16 @@ namespace NewHeroKill.Player.Impl
         public bool CheckRollCard(AbstractCard card, List<ECardColorTypes> colors)
         {
             bool result = false;
-            for (int i = 0; i < colors.Count; i++)
-            {
-                if (card.getColor() == colors[i])
-                {
-                    result = true;
-                    break;
-                }
-            }
-            //判定牌触发
-            player.GetTrigger().afterCheck(card, result);
+            //for (int i = 0; i < colors.Count; i++)
+            //{
+            //    if (card.GetCardImggetColor() == colors[i])
+            //    {
+            //        result = true;
+            //        break;
+            //    }
+            //}
+            ////判定牌触发
+            //player.GetTrigger().afterCheck(card, result);
             return result;
         }
 
@@ -194,7 +194,7 @@ namespace NewHeroKill.Player.Impl
         /// <returns></returns>
         public bool IsSameCountry(AbstractPlayer target)
         {
-            return player.GetInfo().getCountry() == target.GetInfo().getCountry();
+            return player.GetInfo().GetCountry() == target.GetInfo().GetCountry();
         }
 
         /// <summary>
@@ -204,8 +204,15 @@ namespace NewHeroKill.Player.Impl
         /// <returns></returns>
         public bool IsSameSex(AbstractPlayer target)
         {
-            return player.GetInfo().sex == target.GetInfo().sex;
+            //return player.GetInfo().Se == target.GetInfo().sex;
+            return false;
         }
 
+
+
+        public bool CheckRollCard(AbstractCard card, params ECardColorTypes[] colors)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

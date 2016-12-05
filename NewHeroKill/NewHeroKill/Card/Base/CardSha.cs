@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace NewHeroKill.Card.Base
 {
-    public class CardSha : AbstractCard, IEffectCard
+    public class CardSha : AbstractCard
     {
 
         public CardSha()
@@ -20,7 +20,7 @@ namespace NewHeroKill.Card.Base
         /// 
         /// </summary>
         /// <param name="AbstractPlayer"></param>
-        public override void Use(AbstractPlayer p, List<AbstractPlayer> players)
+        public void Use(AbstractPlayer p, List<AbstractPlayer> players)
         {
             base.Use(p, players);
             Console.WriteLine("目标数：" + players.Count());
@@ -28,31 +28,9 @@ namespace NewHeroKill.Card.Base
             for (int i = 0; i < list.Count(); i++)
             {
                 AbstractPlayer tmp = list[i];
-                //// 绘制杀的效果
-                //ViewManagement.getInstance().printBattleMsg(
-                //        p.getInfo().getName() + "对" + tmp.getInfo().getName()
-                //        + "使用了杀" );
-                //try {
-                //    SwingUtilities.invokeAndWait(new Runnable() {
-                //        @Override
-                //        public void run() {
-                //            p.refreshView();
-                //            PaintService.drawEffectImage(getEffectImage(),p);
-                //            PaintService.drawLine(p,tmp);
-                //        }
-                //    });
-                //} catch (InterruptedException e) {
-                //    e.printStackTrace();
-                //} catch (InvocationTargetException e) {
-                //    e.printStackTrace();
-                //}
-                ////drawEffect(p, players);
-                ExecuteSha(p, tmp);
-                // 刷新
-                tmp.RefreshView();
+
 
             }
-            // ViewManagement.getInstance().refreshAll();
         }
 
         /// <summary>
@@ -88,28 +66,10 @@ namespace NewHeroKill.Card.Base
         /// 使用目标检测
         /// </summary>
         /// <param name="ph"></param>
-        public void TargetCheck(Panel_HandCards ph)
+        public void TargetCheck(GameObject ph)
         {
 
-            // 遍历 检测
-            List<Panel_Player> list = ph.getMain().getPlayers();
-            for (int i = 0; i < list.Count(); i++)
-            {
-                Panel_Player pp = list.ElementAt(i);
-                //如果死亡
-                if (pp.getPanelState() == Panel_Player.DEAD || pp.getPanelState() == Panel_Player.DISABLE)
-                {
-                    Console.WriteLine("this is dead");
-                    continue;
-                }
-                // 如果需要射程
-                if (!this.IsInRange(ph.getPlayer(), pp.getPlayer()))
-                {
-                    pp.disableToUse();
-                    continue;
-                }
-                pp.enableToUse();
-            }
+
 
         }
 
@@ -119,7 +79,7 @@ namespace NewHeroKill.Card.Base
         /// <param name="user"></param>
         /// <param name="target"></param>
         /// <returns></returns>
-        public override bool TargetCheck4SinglePlayer(AbstractPlayer user,
+        public new bool TargetCheck4SinglePlayer(AbstractPlayer user,
                 AbstractPlayer target)
         {
             bool b = !user.GetState().IsUsedSha();

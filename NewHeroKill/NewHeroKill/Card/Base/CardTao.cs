@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace NewHeroKill.Card.Base
 {
-    public class CardTao : AbstractCard, IEffectCard
+    public class CardTao : AbstractCard
     {
         public CardTao()
         {
@@ -36,42 +36,19 @@ namespace NewHeroKill.Card.Base
         /// </summary>
         /// <param name="p"></param>
         /// <param name="players"></param>
-        public override void use(AbstractPlayer p, List<AbstractPlayer> players)
+        public new void Use(AbstractPlayer p, List<AbstractPlayer> players)
         {
             base.Use(p, players);
-            //// TODO Auto-generated method stub
-            //ViewManagement.getInstance().printBattleMsg(p.getInfo().getName()+"使用了桃");
-            p.GetAction().Tao();
-            p.getPanel().refresh();
+
         }
 
 
-        protected override void DrawEffect(AbstractPlayer p, List<AbstractPlayer> players)
+        protected new void DrawEffect(AbstractPlayer p, List<AbstractPlayer> players)
         {
-            //try {
-            //    SwingUtilities.invokeAndWait(new Runnable() {
 
-            //        @Override
-            //        public void run() {
-            //            PaintService.drawEffectImage(getEffectImage(), p);
-            //            PaintService.clearAfter(1000);
-            //        }
-            //    });
-            //} catch (InterruptedException e) {
-            //    // TODO Auto-generated catch block
-            //    e.printStackTrace();
-            //} catch (InvocationTargetException e) {
-            //    // TODO Auto-generated catch block
-            //    e.printStackTrace();
-            //}
         }
 
 
-        public override Image GetEffectImage()
-        {
-            //return ImgUtil.getPngImgByName("ef_tao");
-            return null;
-        }
     }
 
 }

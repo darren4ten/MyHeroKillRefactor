@@ -39,13 +39,9 @@ namespace NewHeroKill.Card.Kit
         }
 
 
-        public override void Use(AbstractPlayer p, List<AbstractPlayer> players)
+        public new void Use(AbstractPlayer p, List<AbstractPlayer> players)
         {
-            base.Use(p, players);
-            if (!p.GetState().IsAI())
-                pc = (Panel_Control)p.getPanel();
-            targetPlayers = new List<AbstractPlayer>(players);
-            InitKit();
+       
         }
 
         /// <summary>
@@ -56,23 +52,23 @@ namespace NewHeroKill.Card.Kit
         /// <param name="players"></param>
         public void AskWuXieKeJi(AbstractPlayer p, List<AbstractPlayer> players)
         {
-            if (HasWuxiekejiInBattle())
-            {
-                p.RefreshView();
-                Console.WriteLine("场上有无懈");
-                // 询问无懈
-                List<AbstractPlayer> askPlayers = ModuleManagement.getInstance()
-                        .getPlayerList();
-                for (int i = 0; i < askPlayers.Count(); i++)
-                {
-                    // 如果有人出无懈
-                    if (askPlayers.ElementAt(i).GetRequest().RequestWuXie())
-                    {
-                        isWuXie = true;
-                        break;
-                    }
-                }
-            }
+            //if (HasWuxiekejiInBattle())
+            //{
+            //    p.RefreshView();
+            //    Console.WriteLine("场上有无懈");
+            //    // 询问无懈
+            //    List<AbstractPlayer> askPlayers = ModuleManagement.getInstance()
+            //            .getPlayerList();
+            //    for (int i = 0; i < askPlayers.Count(); i++)
+            //    {
+            //        // 如果有人出无懈
+            //        if (askPlayers.ElementAt(i).GetRequest().RequestWuXie())
+            //        {
+            //            isWuXie = true;
+            //            break;
+            //        }
+            //    }
+            //}
         }
 
         /*
@@ -80,11 +76,11 @@ namespace NewHeroKill.Card.Kit
          */
         protected bool HasWuxiekejiInBattle()
         {
-            foreach (AbstractPlayer p in ModuleManagement.getInstance().getPlayerList())
-            {
-                if (p.HasCard(Const_Game.WUXIEKEJI))
-                    return true;
-            }
+            //foreach (AbstractPlayer p in ModuleManagement.getInstance().getPlayerList())
+            //{
+            //    if (p.HasCard(Const_Game.WUXIEKEJI))
+            //        return true;
+            //}
             return false;
         }
 

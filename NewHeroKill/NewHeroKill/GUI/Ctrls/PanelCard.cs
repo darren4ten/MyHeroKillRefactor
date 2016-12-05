@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TestGDI.Ctrls
+namespace NewHeroKill.GUI.Ctrls
 {
     public class PanelCard : UserControl
     {
@@ -42,27 +42,27 @@ namespace TestGDI.Ctrls
         private void UpdatePanel()
         {
             //背景图片
-            btnCardBg.BackgroundImage = TestGDI.Properties.Resources.P_liubei1;
+            btnCardBg.BackgroundImage = NewHeroKill.Properties.Resources.P_liubei;
             //花色
             if (this.CardColorType == "红桃")
             {
-                picBoxCardColorType.BackgroundImage = TestGDI.Properties.Resources.color_hongxin1;
+                picBoxCardColorType.BackgroundImage = NewHeroKill.Properties.Resources.color_hongxin1;
             }
             else if (this.CardColorType == "黑桃")
             {
-                picBoxCardColorType.BackgroundImage = TestGDI.Properties.Resources.color_heitao;
+                picBoxCardColorType.BackgroundImage = NewHeroKill.Properties.Resources.color_heitao;
             }
             else if (this.CardColorType == "梅花")
             {
-                picBoxCardColorType.BackgroundImage = TestGDI.Properties.Resources.color_meihua;
+                picBoxCardColorType.BackgroundImage = NewHeroKill.Properties.Resources.color_meihua;
             }
             else if (this.CardColorType == "方块")
             {
-                picBoxCardColorType.BackgroundImage = TestGDI.Properties.Resources.color_fangkuai;
+                picBoxCardColorType.BackgroundImage = NewHeroKill.Properties.Resources.color_fangkuai;
             }
             else
             {
-                picBoxCardColorType.BackgroundImage = TestGDI.Properties.Resources.P_liubei1;
+                picBoxCardColorType.BackgroundImage = NewHeroKill.Properties.Resources.P_liubei;
             }
             //数字
             lblCardNumber.Text = this.CardNumber;

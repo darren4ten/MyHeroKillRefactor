@@ -36,18 +36,18 @@ namespace NewHeroKill.Card.Equipment
         /// </summary>
         /// <param name="p"></param>
         /// <param name="players"></param>
-        public override void Use(AbstractPlayer p, List<AbstractPlayer> players)
+        public void Use(AbstractPlayer p, List<AbstractPlayer> players)
         {
-            //清空战场
-            ModuleManagement.getInstance().getBattle().clear();
-            //当前出牌区域清空
-            p.GetState().GetUsedCard().Clear();
-            //手牌中删除
-            p.GetState().GetCardList().Remove(this);
-            //装载
-            p.GetAction().LoadEquipmentCard(this);
-            //使用者手牌刷新
-            p.RefreshView();
+            ////清空战场
+            //ModuleManagement.getInstance().getBattle().clear();
+            ////当前出牌区域清空
+            //p.GetState().GetUsedCard().Clear();
+            ////手牌中删除
+            //p.GetState().GetCardList().Remove(this);
+            ////装载
+            //p.GetAction().LoadEquipmentCard(this);
+            ////使用者手牌刷新
+            //p.RefreshView();
         }
 
         /// <summary>
@@ -62,7 +62,7 @@ namespace NewHeroKill.Card.Equipment
         /// 装载到玩家上
         /// </summary>
         /// <param name="p"></param>
-        public override void Load(AbstractPlayer p)
+        public void Load(AbstractPlayer p)
         {
             //ViewManagement.getInstance().printBattleMsg(p.GetInfo().GetName()+"装载"+GetName());
             //根据不同类型对应不同位置
@@ -111,7 +111,7 @@ namespace NewHeroKill.Card.Equipment
         /// 从玩家卸载
         /// </summary>
         /// <param name="p"></param>
-        public override void Unload(AbstractPlayer p)
+        public void Unload(AbstractPlayer p)
         {
             switch (equipmentType)
             {
@@ -173,7 +173,7 @@ namespace NewHeroKill.Card.Equipment
             this.equipmentType = equipmentType;
         }
 
-        public override void BeginInit()
+        public  void BeginInit()
         {
 
         }

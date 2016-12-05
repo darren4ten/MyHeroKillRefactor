@@ -22,17 +22,8 @@ namespace NewHeroKill.Card.Changed
             this.realCard = real;
         }
 
-        public override int getCardType()
-        {
-            // TODO Auto-generated method stub
-            return 0;
-        }
-        public override AbstractCard getRealCard()
-        {
-            return realCard;
-        }
 
-        public override void use(AbstractPlayer p, AbstractPlayer toP)
+        public void Use(AbstractPlayer p, AbstractPlayer toP)
         {
             //final AbstractPlayer target = players.get(0);
             owner = toP;
@@ -60,7 +51,7 @@ namespace NewHeroKill.Card.Changed
         }
 
 
-        public override void DoKit()
+        public new void DoKit()
         {
             //AbstractCard cc = ModuleManagement.getInstance().showOneCheckCard();
             //bool flag = owner.GetFunction().CheckRollCard(cc, ECardColorTypes.HONGXIN);
@@ -78,13 +69,13 @@ namespace NewHeroKill.Card.Changed
             //owner.GetState().GetCheckedCardList().Remove(this);
         }
 
-        public int GetKitCardType()
+        public new int GetKitCardType()
         {
             return Const_Game.LEBUSISHU;
         }
 
 
-        public override String GetShowNameInPanel()
+        public new String GetShowNameInPanel()
         {
             return "乐";
         }
@@ -103,6 +94,18 @@ namespace NewHeroKill.Card.Changed
         {
             return "乐不思蜀";
         }
+
+        public AbstractCard GetRealCard()
+        {
+            throw new NotImplementedException();
+        }
+
+        public int GetCardType()
+        {
+            throw new NotImplementedException();
+        }
+
+
     }
 
 }

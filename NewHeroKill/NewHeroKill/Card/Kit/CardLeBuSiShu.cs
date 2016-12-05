@@ -17,7 +17,7 @@ namespace NewHeroKill.Card.Kit
         {
         }
 
-        public override void Use(AbstractPlayer p, List<AbstractPlayer> players)
+        public new void Use(AbstractPlayer p, List<AbstractPlayer> players)
         {
             base.Use(p, players);
             AbstractPlayer target = players.ElementAt(0);
@@ -34,7 +34,7 @@ namespace NewHeroKill.Card.Kit
         /// <summary>
         ///  锦囊发动
         /// </summary>
-        public override void DoKit()
+        public  void DoKit()
         {
             //无懈
             AskWuXieKeJi(owner, null);
@@ -64,31 +64,31 @@ namespace NewHeroKill.Card.Kit
             Gc();
         }
 
-        public override String GetShowNameInPanel()
+        public  String GetShowNameInPanel()
         {
             return "乐";
         }
 
 
-        public override int GetKitCardType()
+        public  int GetKitCardType()
         {
             return type;
         }
 
 
-        public override void TargetCheck(Panel_HandCards ph)
+        public new void TargetCheck(GameObject ph)
         {
-            List<Panel_Player> list = ph.getMain().getPlayers();
-            foreach (Panel_Player pp in list)
-            {
-                if (!pp.getPlayer().getState().isDead())
-                {
-                    if (pp.getPlayer().getState().hasDelayKit(Const_Game.LEBUSISHU))
-                    {
-                        pp.disableToUse();
-                    }
-                }
-            }
+            //List<Panel_Player> list = ph.getMain().getPlayers();
+            //foreach (Panel_Player pp in list)
+            //{
+            //    if (!pp.getPlayer().getState().isDead())
+            //    {
+            //        if (pp.getPlayer().getState().hasDelayKit(Const_Game.LEBUSISHU))
+            //        {
+            //            pp.disableToUse();
+            //        }
+            //    }
+            //}
         }
         public AbstractPlayer GetOwner()
         {

@@ -21,7 +21,7 @@ namespace NewHeroKill.Card.Kit
         ///  重写use 在目标玩家的所有牌中选择一张 删除
         /// </summary>
         /// <param name="AbstractPlayer"></param>
-        public override void Use(AbstractPlayer p, List<AbstractPlayer> players)
+        public new void Use(AbstractPlayer p, List<AbstractPlayer> players)
         {
             base.Use(p, players);
             // 触发技能

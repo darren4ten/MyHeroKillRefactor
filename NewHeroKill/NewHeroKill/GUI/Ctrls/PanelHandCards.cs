@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TestGDI.Ctrls
+namespace NewHeroKill.GUI.Ctrls
 {
     public class PanelHandCards : UserControl
     {
@@ -30,66 +30,66 @@ namespace TestGDI.Ctrls
         private void InitializeComponent()
         {
             this.panelCardsInHand = new System.Windows.Forms.Panel();
-            this.btnHandout = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnHandout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panelCardsInHand
             // 
             this.panelCardsInHand.BackColor = System.Drawing.Color.Transparent;
-            this.panelCardsInHand.Location = new System.Drawing.Point(3, 28);
+            this.panelCardsInHand.Location = new System.Drawing.Point(3, 2);
             this.panelCardsInHand.Name = "panelCardsInHand";
             this.panelCardsInHand.Size = new System.Drawing.Size(499, 100);
             this.panelCardsInHand.TabIndex = 0;
             // 
-            // btnHandout
+            // button1
             // 
-            this.btnHandout.BackColor = System.Drawing.Color.Transparent;
-            this.btnHandout.BackgroundImage = global::TestGDI.Properties.Resources.bok;
-            this.btnHandout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnHandout.FlatAppearance.BorderSize = 0;
-            this.btnHandout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHandout.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnHandout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnHandout.Location = new System.Drawing.Point(509, 31);
-            this.btnHandout.Name = "btnHandout";
-            this.btnHandout.Size = new System.Drawing.Size(75, 23);
-            this.btnHandout.TabIndex = 1;
-            this.btnHandout.Text = "确 定";
-            this.btnHandout.UseVisualStyleBackColor = false;
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::NewHeroKill.Properties.Resources.bok;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button1.Location = new System.Drawing.Point(508, 79);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "弃 牌";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancel.BackgroundImage = global::TestGDI.Properties.Resources.bok;
+            this.btnCancel.BackgroundImage = global::NewHeroKill.Properties.Resources.bok;
             this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnCancel.Location = new System.Drawing.Point(508, 60);
+            this.btnCancel.Location = new System.Drawing.Point(508, 34);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "取 消";
             this.btnCancel.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnHandout
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::TestGDI.Properties.Resources.bok;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button1.Location = new System.Drawing.Point(508, 105);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "弃 牌";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnHandout.BackColor = System.Drawing.Color.Transparent;
+            this.btnHandout.BackgroundImage = global::NewHeroKill.Properties.Resources.bok;
+            this.btnHandout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHandout.FlatAppearance.BorderSize = 0;
+            this.btnHandout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHandout.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnHandout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnHandout.Location = new System.Drawing.Point(509, 5);
+            this.btnHandout.Name = "btnHandout";
+            this.btnHandout.Size = new System.Drawing.Size(75, 23);
+            this.btnHandout.TabIndex = 1;
+            this.btnHandout.Text = "确 定";
+            this.btnHandout.UseVisualStyleBackColor = false;
             // 
             // PanelHandCards
             // 
@@ -99,7 +99,7 @@ namespace TestGDI.Ctrls
             this.Controls.Add(this.btnHandout);
             this.Controls.Add(this.panelCardsInHand);
             this.Name = "PanelHandCards";
-            this.Size = new System.Drawing.Size(600, 140);
+            this.Size = new System.Drawing.Size(587, 106);
             this.ResumeLayout(false);
 
         }

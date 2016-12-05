@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TestGDI.Ctrls
+namespace NewHeroKill.GUI.Ctrls
 {
     public class PanelBattlefiled : UserControl
     {
@@ -27,7 +27,7 @@ namespace TestGDI.Ctrls
             // 
             this.BackColor = System.Drawing.Color.Transparent;
             this.Name = "PanelBattlefiled";
-            this.Size = new System.Drawing.Size(600, 230);
+            this.Size = new System.Drawing.Size(534, 190);
             this.ResumeLayout(false);
 
         }

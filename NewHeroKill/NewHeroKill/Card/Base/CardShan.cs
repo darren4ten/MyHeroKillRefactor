@@ -30,17 +30,10 @@ namespace NewHeroKill.Card.Base
         /// 重写绘制效果
         /// </summary>
         /// <param name="AbstractPlayer"></param>
-        protected override void DrawEffect(AbstractPlayer p,
+        protected  void DrawEffect(AbstractPlayer p,
                 List<AbstractPlayer> players)
         {
-            //SwingUtilities.invokeLater(new Runnable() {
-
-            //    @Override
-            //    public void run() {
-            //        PaintService.drawEffectImage(getEffectImage(), p);
-            //        PaintService.clearAfter(1000);
-            //    }
-            //});
+           
         }
     }
 }

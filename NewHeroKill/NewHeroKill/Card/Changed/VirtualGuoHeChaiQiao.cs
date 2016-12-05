@@ -28,13 +28,13 @@ namespace NewHeroKill.Card.Changed
         }
 
 
-        public override AbstractCard GetRealCard()
+        public  AbstractCard GetRealCard()
         {
             return realCard;
         }
 
         //使用
-        public override void Use(AbstractPlayer p, AbstractPlayer toP)
+        public  void Use(AbstractPlayer p, AbstractPlayer toP)
         {
             Console.WriteLine("过河拆桥线程：" + Thread.CurrentThread.Name);
             //绘制

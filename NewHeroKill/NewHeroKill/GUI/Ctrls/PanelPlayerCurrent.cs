@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestGDI.Ctrls
+namespace NewHeroKill.GUI.Ctrls
 {
     class PanelPlayerCurrent
     {

@@ -48,14 +48,14 @@ namespace NewHeroKill.Card.Changed
             cs.ExecuteSha(p, toP);
         }
 
-        public override int GetCardType()
+        public int GetCardType()
         {
             // TODO Auto-generated method stub
             return 0;
         }
 
 
-        public override AbstractCard GetRealCard()
+        public AbstractCard GetRealCard()
         {
             return realCard;
         }

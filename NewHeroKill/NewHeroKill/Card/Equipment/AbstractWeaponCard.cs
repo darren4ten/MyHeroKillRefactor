@@ -56,7 +56,7 @@ namespace NewHeroKill.Card.Equipment
 
         }
 
-        public override void AfterSha(AbstractPlayer p, AbstractPlayer target)
+        public new void AfterSha(AbstractPlayer p, AbstractPlayer target)
         {
             // TODO Auto-generated method stub
 
@@ -85,19 +85,19 @@ namespace NewHeroKill.Card.Equipment
         }
 
 
-        public override void DamageTrigger(AbstractPlayer p, AbstractPlayer target)
+        public  void DamageTrigger(AbstractPlayer p, AbstractPlayer target)
         {
             // TODO Auto-generated method stub
 
         }
 
-        public override void FalseTrigger(AbstractPlayer p, AbstractPlayer target)
+        public  void FalseTrigger(AbstractPlayer p, AbstractPlayer target)
         {
             // TODO Auto-generated method stub
 
         }
 
-        public override void UseSkillBeforeSha(AbstractPlayer p, AbstractPlayer target)
+        public  void UseSkillBeforeSha(AbstractPlayer p, AbstractPlayer target)
         {
             // TODO Auto-generated method stub
 

@@ -1,5 +1,8 @@
 using NewHeroKill.Player;
+using System;
 using System.Collections.Generic;
+using System.Windows.Forms;
+using NewHeroKill.GUI.Ctrls;
 
 namespace NewHeroKill.Service
 {
@@ -15,6 +18,9 @@ namespace NewHeroKill.Service
     /// </summary>
     public class ViewManagement
     {
+        //主窗口
+        public Form MainForm { get; set; }
+
 
         // 单例构造
         private static ViewManagement instance;
@@ -43,36 +49,22 @@ namespace NewHeroKill.Service
             instance = new ViewManagement();
         }
 
-        // 可刷新组件集合
-        internal IList<IRefreshble> refreshList = new List<IRefreshble>();
+
         // 消息面板
-        internal javax.swing.JTextArea msg;
+        public PanelPrompt PromptMsg { get; set; }
         // 聊天面板
-        internal javax.swing.JTextArea msgChat;
+        public PanelMessage ChatMsg { get; set; }
         // 提示信息
-        internal Panel_Prompt prompt;
-        // 战场消息面板
-        internal Panel_Message message;
+        public PanelMessage TipMsg { get; set; }
 
         /// <summary>
         /// 通知所有组件刷新
         /// </summary>
         public virtual void refreshAll()
         {
-            //JAVA TO C# CONVERTER TODO TASK: Anonymous inner classes are not converted to C# if the base type is not defined in the code being converted:
-            //			javax.swing.SwingUtilities.invokeLater(new Runnable()
-            //		{
-            //
-            //			@Override public void run()
-            //			{
-            //				for (int i = 0; i < refreshList.size(); i++)
-            //				{
-            //					refreshList.get(i).refresh();
-            //					// System.out.println(i+"刷新");
-            //				}
-            //				printChatMsg("refresh!");
-            //			}
-            //		});
+            PromptMsg.Refresh();
+            ChatMsg.Refresh();
+            TipMsg.Refresh();
         }
 
         /// <summary>
@@ -80,8 +72,10 @@ namespace NewHeroKill.Service
         /// </summary>
         public virtual void printMsg(string str)
         {
-            msg.append(str + "\n");
-            msg.CaretPosition = msg.Text.length();
+            this.UpdateUI(() =>
+            {
+                //TipMsg.Controls.Find()
+            });
             // printBattleMsg(str);
         }
 
@@ -92,9 +86,9 @@ namespace NewHeroKill.Service
         /// </summary>
         public virtual void printChatMsg(string msg)
         {
-            // msgChat.append("【AI孙权】道：我去你妈了个彼得！会不会玩啊"+"\n");
-            msgChat.append(msg + "\n");
-            msgChat.CaretPosition = msgChat.Text.length();
+            //// msgChat.append("【AI孙权】道：我去你妈了个彼得！会不会玩啊"+"\n");
+            //msgChat.append(msg + "\n");
+            //msgChat.CaretPosition = msgChat.Text.length();
         }
 
         /// <summary>
@@ -104,8 +98,8 @@ namespace NewHeroKill.Service
         /// </summary>
         public virtual void printBattleMsg(string str)
         {
-            message.addMessage(str);
-            message.repaint();
+            //message.addMessage(str);
+            //message.repaint();
             printMsg(str);
         }
 
@@ -133,54 +127,9 @@ namespace NewHeroKill.Service
             //		});
         }
 
-        public virtual IList<IRefreshble> RefreshList
+        public void UpdateUI(Action action)
         {
-            get
-            {
-                return refreshList;
-            }
-        }
-
-        public virtual javax.swing.JTextArea Msg
-        {
-            get
-            {
-                return msg;
-            }
-            set
-            {
-                this.msg = value;
-            }
-        }
-
-
-        public virtual javax.swing.JTextArea MsgChat
-        {
-            set
-            {
-                this.msgChat = value;
-            }
-        }
-
-        public virtual Panel_Prompt Prompt
-        {
-            get
-            {
-                return prompt;
-            }
-            set
-            {
-                this.prompt = value;
-            }
-        }
-
-
-        public virtual Panel_Message Message
-        {
-            set
-            {
-                this.message = value;
-            }
+            MainForm.Invoke(new MethodInvoker(action));
         }
 
     }

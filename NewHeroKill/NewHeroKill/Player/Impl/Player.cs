@@ -30,7 +30,7 @@ namespace NewHeroKill.Player.Impl
         /// </summary>
         /// <param name="?"></param>
         //@SuppressWarnings("unchecked")
-        public void LoadSkills(String name)
+        public override void LoadSkills(String name)
         {
             //// 获取技能列表
             //List<String> list = ConfigFileReadUtil.getSkillListFromXML(name);
